@@ -12,3 +12,5 @@ theme:
 
 nav:
         - Home: index.md
+        - Relatório Intranet: relatorio-intranet.md
+        - Relatório Criptografia Simétrica e assimétrica: cripto.md
