@@ -1,0 +1,724 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../intranet/">
+      
+      
+        <link rel="next" href="../cripto/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+    
+    
+      
+        <title>Relatório Intranet - Fudamentos de Redes de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introducao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Fudamentos de Redes de Computadores" class="md-header__button md-logo" aria-label="Fudamentos de Redes de Computadores" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fudamentos de Redes de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Relatório Intranet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/francisco1code/FRC_docs" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../intranet/" class="md-tabs__link">
+      Intranet
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Relatório Intranet
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../cripto/" class="md-tabs__link">
+      Criptografia Simétrica e assimétrica
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../critpto-relatorio/" class="md-tabs__link">
+      Relatório Criptografia Simétrica e assimétrica
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fudamentos de Redes de Computadores" class="md-nav__button md-logo" aria-label="Fudamentos de Redes de Computadores" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Fudamentos de Redes de Computadores
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/francisco1code/FRC_docs" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intranet/" class="md-nav__link">
+        Intranet
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Relatório Intranet
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cripto/" class="md-nav__link">
+        Criptografia Simétrica e assimétrica
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../critpto-relatorio/" class="md-nav__link">
+        Relatório Criptografia Simétrica e assimétrica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="introducao">Introdução</h1>
+<p>No mundo atual, onde a conectividade é uma peça fundamental para o funcionamento eficiente de organizações, a intranet se destaca como uma poderosa ferramenta que possibilita o compartilhamento seguro e rápido de informações e serviços internos. Nesse contexto, o presente trabalho tem como objetivo a construção de uma intranet robusta, baseada no protocolo TCP/IP, visando fornecer aos usuários um ambiente interno eficiente e funcional.</p>
+<p>A tarefa primordial a ser empreendida nesta atividade é a configuração dos principais serviços de uma intranet TCP/IP. O aluno, de forma minuciosa, terá a responsabilidade de implementar e otimizar os serviços básicos, incluindo o DNS (Sistema de Nomes de Domínios), o SMTP (Protocolo de Transferência de Emails) juntamente com o cliente de e-mail, e a WWW (World Wide Web), a fim de proporcionar uma experiência integrada e agradável aos usuários da intranet.</p>
+<h1 id="dns">DNS</h1>
+<pre><code>Montagem de rede interconectada para o experimento
+
+1- Certifique-se de ter o Docker e o Docker Compose instalados em seu sistema.
+2- Crie um arquivo chamado docker-compose.yml e adicione o seguinte conteúdo:
+</code></pre>
+<p>version: '3'</p>
+<p>services:
+  machine1:
+    build:
+      context: .
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.10.1</p>
+<p>machine2:
+    build:
+      context: .
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.10.2</p>
+<p>networks:
+  mynetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24</p>
+<p>3- Em paralelo crie um arquivo chamado Dockerfile e adicione o seguinte conteúdo:
+FROM alpine
+CMD tail -f /dev/null
+4- No terminal, navegue até o diretório onde você salvou os arquivos 'docker-compose.yml' e 'Dockerfile'.
+5- Execute o comando a seguir para construir as imagens e iniciar os containers:
+docker-compose up --build -d
+Aguarde até que os containers sejam criados e iniciados. Eles serão nomeados como nomedopdiretório_machine1_1 e nomedopdiretório_machine2_1
+6- Para testar a conectividade entre os containers usando o comando ping, execute os seguintes comandos:
+docker exec nomedopdiretório_machine1_1 ping 192.168.10.2
+docker exec nomedopdiretório_machine2_1 ping 192.168.10.1</p>
+<p>Os comandos acima executarão o ping de um container para o outro usando os endereços IP fornecidos. Se a conectividade estiver correta, você receberá respostas dos pings e poderá confirmar que os containers estão se comunicando com sucesso na mesma rede local.
+OBS: Lembre-se de substituir nomedopdiretório pelo nome do diretório em que você salvou os arquivos docker-compose.yml e Dockerfile.</p>
+<h1 id="configuracao-estatica-local-de-enderecosnomes-atraves-arquivo-hosts">Configuração estática local de endereços/nomes (através arquivo hosts)</h1>
+<p>1- Identifique os nomes que você deseja atribuir às máquinas da rede montada. Por exemplo, vamos usar os nomes "machine1" e "machine2".
+2- Abra um terminal e execute o seguinte comando para acessar o shell de um dos containers:
+docker exec -it nomedopdiretório_machine1_1 sh
+Substitua nomedopdiretório pelo nome do diretório em que você salvou os arquivos do Docker Compose.
+3- Dentro do shell do container, edite o arquivo /etc/hosts usando um editor de texto, como o vi:
+vi /etc/hosts
+4- No arquivo /etc/hosts, adicione uma linha para cada nome que você deseja atribuir ao endereço IP correspondente. Por exemplo:
+machine1
+127.0.0.1       localhost
+192.168.10.1    machine1
+192.168.10.2    machine2 &lt;-- Acrescente esse trecho
+~</p>
+<p>machine2
+127.0.0.1       localhost
+192.168.10.2    machine2
+192.168.10.1    machine1 &lt;-- Acrescente esse trecho
+~</p>
+<h2 id="varia-de-caso-a-caso-mas-sera-algo-parecido-com-isso">Varia de caso a caso mas será algo parecido com isso</h2>
+<p>5- Salve e feche o arquivo.
+6- Agora você configurou as associações fixas e estáticas entre os nomes e os endereços IP dentro dos containers.
+Para testar a resolução de nomes local usando o arquivo /etc/hosts, execute o comando ping usando os nomes em vez dos endereços IP. Por exemplo:
+docker exec -it nomedopdiretório_machine1_1 ping machine2
+docker exec -it nomedopdiretório_machine2_1 ping machine1
+Você deve ver os pacotes de ping sendo enviados e recebidos entre os containers usando os nomes configurados.
+7- Para verificar o nome atual do sistema dentro de um container, use o comando hostname:
+docker exec -it nomedopdiretório_machine1_1 hostname
+Para alterar o nome do sistema dentro de um container, use o comando hostname seguido pelo novo nome:
+docker exec -it nomedopdiretório_machine1_1 hostname novo-nome
+Lembre-se de substituir nomedopdiretório pelo nome do diretório em que você salvou os arquivos do Docker Compose.
+Caso você receba esse erro:
+hostname: sethostname: Operation not permitted
+Basta acrescentar o hostname ao arquivo docker-compose.yml</p>
+<p>version: '3'</p>
+<p>services:
+  machine1:
+    build:
+      context: .
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.10.1
+    hostname: machine1</p>
+<p>machine2:
+    build:
+      context: .
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.10.2
+    hostname: machine2</p>
+<p>networks:
+  mynetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24</p>
+<p>e recriar os contâiners com:
+docker-compose up -d
+8- Para verificar o domínio configurado no sistema dentro de um container, use o comando dnsdomainname.
+OBS: O comando dnsdomainname não está disponível dentro dos contêineres Docker. No contexto dos contêineres, não existe um domínio configurado da mesma forma que em um sistema operacional completo.
+Os contêineres Docker são isolados e têm seu próprio namespace de rede. Eles não estão cientes dos domínios configurados fora do contêiner. Portanto, ao executar o comando dnsdomainname dentro de um contêiner, ele não retornará nada.</p>
+<p>Configurando o DNS no docker
+9- Altere o arquivo resolv.conf:
+Entre no container criado:
+docker exec -it dns_machine2_1 /bin/bash/</p>
+<p>Digite:
+vi /etc/resolv.conf
+Dentro do resolv.conf, escreva:
+nameserver 127.0.0.11
+options edns0 trust-ad ndots:0
+domain queropassar.com
+nameserver 192.168.10.2
+nameserver 192.168.10.3
+10- Altere os arquivos named.conf.local
+Acesse:
+cd /etc/bind/
+Inicie alterando o arquivo named.conf.local
+//
+// Do any local configuration here
+//</p>
+<p>// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+zone "queropassar.com" in {
+   type master;
+   file "/etc/bind/db.queropassar";
+};
+/ Zona para dns reverso
+zone "10.168.192.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/db.queroreprovar";
+};
+Depois crie os arquivos db.dns e db.dnsreverse, com seus respectivos nomes:
+Primeiro o db.dns:
+/ Cada definição de master deve se iniciar com uma entrada SOA
+/ Ela indica o servidor de nomes para o domínio em questão e parâmetros de operação
+@ IN SOA flpp.queropassar.com. root.flpp.queropassar.com. (
+2022092601 ;numero serial - deve ser incrementado a cada mudança neste arquivo
+21600 ;refresh - das informa��ões para slaves
+1800 ;retry �~@~S tempo entre as tentativas
+604800 ;expire - tempo para se desistir de contactar master
+86400 ) ;mí nimo - tempo a manter a informação no cache (TTL)
+IN NS flpp.queropassar.com.
+queropassar.com. IN MX 10 FERNANDO.queropassar.com. ;entrada MX (mail server)
+localhost IN A 127.0.0.1
+machine2 IN A 192.168.10.2
+machine3 IN A 192.168.10.3
+flpp IN A 192.168.10.66
+FERNANDO IN A 192.168.10.100
+Primeiro o db.dnsreverse:
+// Realiza a resolução reversa
+// O tipo PTR significa um alias para o endereço IP
+@ IN SOA flpp.queropassar.com. root.flpp.queropassar.com. (
+2022092601
+21600
+1800
+604800
+86400 )
+IN NS flpp.queropassar.com.
+2 IN PTR machine2.queropassar.com.
+3 IN PTR machine3.queropassar.com.
+66 IN PTR flpp.queropassar.com.
+100 IN PTR FERNANDO.queropassar.com.
+11- Rode o comando para fazer as mudanças realizadas:
+/etc/init.d/bind9 start
+ou
+sudo /usr/sbin/named -f -g -d 1
+Esse segundo comando serve para rodar mostrando o que está sendo feito durante o processo.
+12- Testando o DNS
+Rode:
+nslookup
+Consulte:
+server <nome ou IP></p>
+<h1 id="smtp">SMTP</h1>
+<p>Passo 1: Instalação do Postfix
+sudo apt install postfix
+Respostas durante a instalação:
+Ok
+Site da Internet (Internet Site)
+pv-notebook
+Passo 2: Configuração do Postfix
+Durante a configuração, responda as seguintes opções:
+Ok
+Site da Internet (Internet Site)
+pv-notebook NONE
+chmod.com.br
+chmod.com.br, pv-notebook, pv-notebook, localhost.localdomain, , localhost_
+Não
+127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128_
+Limite de tamanho: 0
+Caractere de extensão: +
+Todos (all)
+Passo 3: Iniciando o Postfix
+sudo service postfix start
+Passo 4: Adicionando usuários ao grupo
+adduser francisco
+adduser leonardo
+adduser paulo
+adduser pedro
+Senha para todos os usuários: redes
+Passo 5: Instalação do utilitário de email
+sudo apt install mailutils
+Passo 6: Enviando uma mensagem de email
+Use o comando abaixo substituindo "nomeuser" pelo usuário desejado e "chmod.com.br" pelo domínio correto:
+mail nomeuser@chmod.com.br
+Escreva a mensagem e, quando terminar, utilize o comando CTRL + D para encerrar e enviar.
+Passo 7: Ver mensagens enviadas
+As mensagens enviadas estarão na pasta:
+/var/mail/</p>
+<p>Acesse o usuário e veja as mensagens.
+POP3 e IMAP com Dovecot
+Passo 1: Instalação do Dovecot
+sudo apt install dovecot-core dovecot-imapd dovecot-pop3d
+Passo 2: Configuração do Dovecot para aceitar POP3 e IMAP
+Edite o arquivo de configuração:
+sudo nano /etc/dovecot/dovecot.conf
+Adicione ou descomente as seguintes linhas para aceitar POP3 e IMAP:
+protocols = imap pop3</p>
+<p>Realize o restart do Dovecot:
+sudo systemctl restart dovecot
+Agora o Dovecot está configurado para suportar ambos os protocolos, POP3 e IMAP. O servidor estará pronto para receber conexões dos clientes de email.</p>
+<p>SMTP com Docker
+Para fazer a instalação e configuração do Postfix usando Docker, você pode seguir os seguintes passos:
+Passo 1: Acesse o diretório:
+cd SMTP
+Passo 2: Crie um arquivo chamado Dockerfile com o seguinte conteúdo:
+// Use a imagem base do Ubuntu (ou outra imagem de sua preferência)
+FROM ubuntu:latest</p>
+<p>// Instale o servidor de e-mail Postfix
+RUN apt-get update &amp;&amp; apt-get install -y postfix</p>
+<p>// Instale o mail
+RUN apt install mailutils -y</p>
+<p>// Copie o arquivo de configuração pré-configurado para dentro do contêiner
+COPY postfix-config.txt /etc/postfix/main.cf</p>
+<p>// Inicie o serviço do Postfix quando o contêiner for iniciado
+CMD service postfix start &amp;&amp; tail -f /dev/null
+Passo 3: Crie um arquivo chamado postfix-config.txt com o seguinte conteúdo:
+// Configuração do Postfix
+myhostname = chmod.com.br
+mydestination = chmod.com.br, localhost.localdomain, localhost
+mynetworks = 127.0.0.0/8, 192.168.10.0/24
+inet_interfaces = all</p>
+<p>Substitua "chmod.com.br" pelo nome do seu servidor de e-mail (definido no DNS) e o endereço "192.168.10.0/24" pelo endereço de rede que você definiu para a rede local da sua bancada.
+Passo 4: Construa a imagem Docker:
+docker build -t smtp .
+Passo 5: Execute o container Docker:
+docker run -d --name smtp -p 2525:25 smtp
+Agora você tem um servidor de e-mail Postfix em execução dentro do contêiner Docker. Você pode adicionar usuários e enviar e-mails da mesma forma como fez anteriormente:
+docker exec -it smtp bash</p>
+<p>// Agora dentro do contêiner, adicione os usuários
+adduser francisco
+adduser leonardo
+adduser paulo
+adduser pedro</p>
+<p>// Enviando os e-mails
+mail francisco@chmod.com.br
+mail leonardo@chmod.com.br
+mail paulo@chmod.com.br
+mail pedro@chmod.com.br
+Escreva a mensagem e, quando terminar, utilize o comando CTRL + D para encerrar e enviar.
+Os e-mails enviados estarão disponíveis nos respectivos arquivos dentro do diretório /var/mail dentro do contêiner. Para ver os e-mails recebidos, você pode executar:
+docker exec -it smtp /bin/bash
+// Agora dentro do contêiner
+cat /var/mail/francisco
+cat /var/mail/gabriela
+cat /var/mail/murilo
+cat /var/mail/pedro
+Lembrando que esse é um exemplo básico para executar o Postfix dentro do Docker, e em um ambiente real, você precisaria fazer algumas outras configurações para garantir a segurança e autenticação correta dos usuários.</p>
+<h1 id="www">WWW</h1>
+<pre><code>1 - Instalando o apache no servidor DNS:
+
+    sudo apt install apache2
+</code></pre>
+<p>2 - Iniciando e testando o apache</p>
+<p>Foi utilizado o comando sudo service apache2 start para inicializar o programa do apache, depois disso foi criada uma página html de teste contendo apenas o título “Olá Mundo” em seu conteúdo, essa página foi copiada para o arquivo teste.html dentro da pasta /var/www/html. Ao abrir a página www.chmod.com.br/index.html foi possível ver a página descrita. </p>
+<p>Obs: Após o teste, o html foi alterado para conter as questões dos experimentos.</p>
+<h1 id="pgp">PGP</h1>
+<p>O PGP é uma tecnologia de criptografia assimétrica que foi desenvolvida para proteger a privacidade e a autenticidade das comunicações eletrônicas, especialmente e-mails. Foi criado por Phil Zimmermann em 1991 e rapidamente ganhou popularidade por ser uma solução eficaz para garantir a segurança das informações transmitidas pela internet.</p>
+<p>A criptografia assimétrica, também conhecida como criptografia de chave pública, utiliza um par de chaves: uma chave pública e uma chave privada. Cada usuário possui seu próprio par de chaves. A chave pública é compartilhada com outras pessoas, enquanto a chave privada é mantida em segredo e conhecida apenas pelo seu proprietário.</p>
+<p>Vamos entender como o PGP funciona passo a passo:</p>
+<p>Geração das chaves: O usuário gera seu par de chaves, uma pública e uma privada. A chave pública é usada para criptografar as mensagens e é compartilhada livremente com os outros usuários, enquanto a chave privada é protegida e armazenada com segurança pelo proprietário.</p>
+<p>Criptografia de Mensagem: Quando um remetente deseja enviar uma mensagem para um destinatário específico, ele utiliza a chave pública do destinatário para criptografar a mensagem. A mensagem criptografada só pode ser descriptografada pelo destinatário, que é o único detentor da chave privada correspondente.</p>
+<p>Assinatura Digital: Além da criptografia, o PGP permite que os usuários assinem digitalmente suas mensagens. A assinatura digital é criada usando a chave privada do remetente e garante a autenticidade e integridade da mensagem. O destinatário pode verificar a assinatura usando a chave pública do remetente para garantir que a mensagem não foi adulterada durante a transmissão.</p>
+<p>Servidor de Chaves (Chaveiro): Para facilitar o compartilhamento seguro de chaves públicas, existe um serviço chamado servidor de chaves ou chaveiro. Nesse servidor, os usuários podem publicar suas chaves públicas para que outras pessoas possam encontrá-las e usá-las para criptografar mensagens. O servidor de chaves também permite a busca de chaves públicas de outros usuários.</p>
+<p>Confiança em Chaves: O PGP também permite que os usuários estabeleçam níveis de confiança nas chaves públicas de outras pessoas. Ao encontrar a chave pública de alguém em um servidor de chaves, o usuário pode validar a autenticidade dessa chave e atribuir-lhe um nível de confiança. Isso é útil para evitar ataques de homens do meio, onde uma chave falsa é apresentada como sendo de outra pessoa.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
